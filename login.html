@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SecureGovPay Login</title>
+  <title>Login - SecureGovPay</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="container">
@@ -24,10 +25,16 @@
 <script>
 function login(){
   document.getElementById("msg").innerText =
-  "MFA Verified... Redirecting to Dashboard";
+  "Verifying credentials... MFA running...";
 
   setTimeout(()=>{
-    window.location.href = "dashboard.html";
+    document.getElementById("msg").innerText =
+    "Access Granted ✔ Redirecting...";
+
+    setTimeout(()=>{
+      window.location.href = "dashboard.html";
+    },1000);
+
   },1500);
 }
 </script>
