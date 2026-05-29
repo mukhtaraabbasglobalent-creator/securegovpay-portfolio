@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SecureGovPay Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="card">
+    <h1>Secure Login</h1>
+
+    <input placeholder="User ID">
+    <input type="password" placeholder="Password">
+
+    <button onclick="login()">Authenticate</button>
+
+    <p id="msg"></p>
+  </div>
+
+</div>
+
+<script>
+function login(){
+  document.getElementById("msg").innerText =
+  "MFA Verified... Redirecting to Dashboard";
+
+  setTimeout(()=>{
+    window.location.href = "dashboard.html";
+  },1500);
+}
+</script>
+
+</body>
+</html>
