@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SecureGovPay Dashboard</title>
+  <title>Dashboard - SecureGovPay</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="container">
 
-  <div class="card">
+  <div class="card" style="text-align:center;">
     <h1>Security Control Center</h1>
-    <p>🔐 MFA Status: ACTIVE</p>
-    <p>🛡 Encryption: ENABLED</p>
-    <p>🚨 Fraud Detection: MONITORING</p>
+    <p style="color:#22c55e;">🟢 System Status: Fully Operational</p>
   </div>
 
   <div class="card">
-    <h2>Transaction Simulation</h2>
+    <h2>System Security</h2>
+    <p>✔ MFA ACTIVE</p>
+    <p>✔ Encryption ENABLED</p>
+    <p>✔ Fraud Detection MONITORING</p>
+    <p>✔ API Gateway SECURE</p>
+  </div>
 
-    <input placeholder="Service Name (e.g Passport Fee)">
+  <div class="card">
+    <h2>Transaction Simulator</h2>
+
+    <input placeholder="Service Name">
     <input type="number" placeholder="Amount">
 
     <button onclick="process()">Process Payment</button>
 
     <p id="result"></p>
+  </div>
+
+  <div class="card">
+    <h2>Audit Log</h2>
+
+    <p>10:12 - Authentication SUCCESS</p>
+    <p>10:13 - Transaction APPROVED</p>
+    <p>10:14 - Fraud Check CLEARED</p>
   </div>
 
 </div>
@@ -35,7 +50,7 @@ function process(){
 
   setTimeout(()=>{
     document.getElementById("result").innerText =
-    "✔ Payment Successful | Logged in Secure Audit System";
+    "✔ Transaction Successful & Logged";
   },1500);
 }
 </script>
